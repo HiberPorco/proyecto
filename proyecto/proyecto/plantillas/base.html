@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		
+	
+		<title>Proyecto </title>
+		<link type="text/css" rel="stylesheet" href="/static/stylos.css"/>
+		
+	</head>
+	<body >
+		
+	<header>
+			<div id="header"><br/>
+				<i><h1>Mundo Preguntados</h1></i>
+				<right><nav>
+					<menu ><b><a href="/blog/"target="_blank">INICIO</a></b></menu><br><br>
+					<menu><b><li><a href="/blog/registro/">Registro de Usuarios</a></li></b></menu><br><br>
+					{% if user.is_anonymous %}
+					<menu ><b><li><a href="/blog/login/">Login</a></li></b></menu><br><br>
+					{% endif %}
+					{% if user.is_anonymous %}
+					<menu><b><li><a href="/blog/logout/">{{user}} LogOut</a></li></b></menu>
+					{% endif %}
+				</nav></right>
+			</div>
+		</header>  
+	{% block title %}
+       
+    {% endblock %}
+</head>
+<body>
+
+    
+    {%block container%}
+
+    {%endblock %}
+</body>
+</html>
