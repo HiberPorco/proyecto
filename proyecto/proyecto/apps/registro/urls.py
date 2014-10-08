@@ -1,11 +1,14 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from proyecto.apps.registro.views import *
+from .views import *
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'proyecto11.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^blog/', include("proyecto.apps.registro.urls")),
+    url(r'^$',principal),
+    url(r'^login/$',login_usuario),
+    url(r'^perfil/$',perfil),
+    url(r'^logout/$',logout_usuario),
+    url(r'^registro/$',registro_usuarios),
+    
 )
